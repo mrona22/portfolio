@@ -75,3 +75,26 @@ article {
   grid-template-rows: subgrid; /* Align rows of content within the article */
   grid-row: span 3; /* Make each article span 3 rows */
 }
+
+.resume h1, h2 {
+  color: #333;
+}
+.resume body {
+  accent-color: var(--color-accent);
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  padding: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+}
+
+.resum a {
+  color: #0073e6;
+  text-decoration: none;
+}
+.resume hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
