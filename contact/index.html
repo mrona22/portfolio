@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Contact</title>
+    <style>
+        :root {
+            --color-accent: oklch(90% 90% 50); /* Accent color */
+        }
+        body {
+            accent-color: var(--color-accent);
+        }
+    </style>
 </head>
 <body>
     <nav> 
-        <li><a href="../">Home</a></li>
-        <li><a href="../projects/index.html">Projects</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
-        <li><a href="../resume/index.html">Resume</a></li>
-        <li><a href="https://github.com/mrona22" target="_blank">GitHub</a></li>
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="../contact/index.html", class="current">Contact</a></li>
+            <li><a href="../resume/index.html">Resume</a></li>
+            <li><a href="https://github.com/mrona22" target="_blank">GitHub</a></li>
+        </ul>
     </nav>
     <h1>Contact</h1>
     <form action="mailto:ronamilan0322@gmail.com" method="POST" enctype="text/plain">
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="johnsnow@gmail.com" required>
-        <label for="subject">Subject:</label>
-        <input id="subject" name="subject" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="body" rows="10" cols="30" required></textarea>
-        <button>Send</button>
-    </form>
+        <div class="form-row">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="johnsnow@gmail.com" required>
+        </div>
+      
+        <div class="form-row">
+          <label for="subject">Subject:</label>
+          <input id="subject" name="subject" required>
+        </div>
+      
+        <div class="form-row">
+          <label for="message">Message:</label>
+          <textarea id="message" name="body" rows="10" cols="30" required></textarea>
+        </div>
+      
+        <button type="submit">Send</button>
+      </form>
+      
 </body>
 </html>

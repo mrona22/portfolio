@@ -1,6 +1,77 @@
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: auto;
+    padding: 1rem;
   }
+  ul, li {
+    display: contents;
+    
+  }
+  nav {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200);
+    margin-bottom: 1rem;
+  }
+
+  nav a {
+    text-decoration: none; 
+    color: inherit; 
+    padding: 0.5rem;
+    text-align: center; 
+    flex: 1; 
+    transition: color 0.2s ease;
+}
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.4em;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr; /* single column of rows */
+  gap: 1em;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Each row is a 2-column grid: label and input */
+.form-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+/* Make inputs and textarea stretch */
+input,
+textarea {
+  width: 100%;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+/* Align button to the start, span full row */
+button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  font: inherit;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Flexible columns */
+  grid-template-rows: subgrid; /* Align content within each article across columns */
+  gap: 1rem;  /* Space between grid items */
+  padding: 1rem;  /* Padding around the grid */
+}
+article {
+  display: grid; /* Make each article a grid */
+  grid-template-rows: subgrid; /* Align rows of content within the article */
+  grid-row: span 3; /* Make each article span 3 rows */
+}
