@@ -8,8 +8,12 @@ function $$(selector, context = document) {
 }
 
 function normalize(path) {
-    return path.replace(/\/index\.html$/, '').replace(/\/$/, '');
+    return path
+      .replace(/^\/portfolio/, '') // Remove the GitHub Pages base path
+      .replace(/\/index\.html$/, '')
+      .replace(/\/$/, '');
   }
+  
 
 let pages = [
     { url: '', title: 'Home' },
