@@ -14,12 +14,17 @@ let pages = [
     { url : 'contact/', title: 'Contact' },
   ];
 
-  let nav = document.createElement('nav');
-  document.body.prepend(nav);
-  for (let p of pages) {
+let nav = document.createElement('nav');
+
+document.body.prepend(nav);
+
+for (let p of pages) {
     let url = p.url;
     let title = p.title;
     // next step: create link and add it to nav
     url = !url.startsWith('http') ? BASE_PATH + url : url;
-    nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+    let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
+    nav.append(a);
   }
