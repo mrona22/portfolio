@@ -7,6 +7,10 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+function normalize(path) {
+    return path.replace(/\/index\.html$/, '').replace(/\/$/, '');
+  }
+
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
@@ -31,12 +35,12 @@ for (let p of pages) {
 
     a.classList.toggle(
         'current',
-        a.host === location.host && a.pathname === location.pathname
-      );
+        a.host === location.host && normalize(a.pathname) === normalize(location.pathname)
+      );      
     
       // Open external links in a new tab
-      if (a.host !== location.host) {
+    if (a.host !== location.host) {
         a.target = '_blank';
-      }
+    }
     nav.append(a);
   }
