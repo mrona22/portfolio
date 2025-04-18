@@ -1,3 +1,9 @@
+html {
+  color-scheme: light dark;
+  background-color: canvas;
+  color: canvastext;
+}
+
 body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
@@ -9,6 +15,7 @@ body {
     
   }
   nav {
+    --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -31,6 +38,7 @@ nav a.current {
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 form {
   display: grid;
@@ -97,4 +105,16 @@ article {
   border: 0;
   height: 1px;
   background: #ccc;
+}
+
+label.color-scheme {
+  position: absolute; 
+  top: 1rem;          
+  right: 1rem;        
+  font-size: 0.8rem;  
+  font-family: inherit; 
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;    
+  border-radius: 0.3rem; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
