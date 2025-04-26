@@ -79,3 +79,64 @@ select.addEventListener('input', function (event) {
     document.documentElement.style.setProperty('color-scheme', event.target.value);
 });
 
+
+export async function fetchJSON(url) {
+    try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`failed to fetch projects ${response.statusText}`)
+    }
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+
+export function renderProjects(project, containerElement) {
+  // Your code will go here
+  containerElement.innerHTML = '';
+
+  project.forEach(element => {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <h3>${element.title}</h3>
+      <img src="${element.image}" alt="${element.title}">
+      <p>${element.description}</p>
+      `;
+      containerElement.appendChild(article)
+  });
+}
+
+// export function renderProjects(project, containerElement, headingLevel = 'h2') {
+//   // Clear out any existing content in the container
+//   containerElement.innerHTML = '';
+
+//   // Loop through each project in the array (assuming 'project' is an array)
+//   project.forEach(element => {
+//     // Create a new <article> for each project
+//     const article = document.createElement('article');
+    
+//     // Create a dynamic heading element (h2, h3, etc.)
+//     const heading = document.createElement(headingLevel);
+//     heading.textContent = element.title; // Set the project title as the heading
+
+//     // Set the inner HTML for the article, inserting project details
+//     article.innerHTML = `
+//       ${heading.outerHTML} <!-- Insert the heading -->
+//       <img src="${element.image}" alt="${element.title}">
+//       <p>${element.description}</p>
+//     `;
+    
+//     // Append the article to the container
+//     containerElement.appendChild(article);
+//   });
+// }
+
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

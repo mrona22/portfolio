@@ -118,3 +118,47 @@ label.color-scheme {
   border-radius: 0.3rem; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.github-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.github-stats div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  width: auto;              /* adjusts to content */
+  min-width: 100px;         /* optional: keeps it readable */
+}
+
+.github-stats dt {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.github-stats dd {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.projects img {
+  width: 100%;
+  max-width: 300px; /* adjust depending on how big you want */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center the images */
+  border-radius: 8px; /* optional: slightly round corners */
+}
+

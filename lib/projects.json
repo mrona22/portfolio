@@ -1,0 +1,62 @@
+[
+    {
+        "title": "eTrove",
+        "image": "/images/eTrove.png",
+        "description": "IOS Mobile Application, offering students platform to sell."
+    },
+    {
+        "title": "Trading Bot",
+        "image": "/images/stock.jpeg",
+        "description": "Uses API to get Dollar/Euro exchange rate, SVM."
+    },
+    {
+        "title": "Portfolio",
+        "image": "/images/website.webp",
+        "description": "My presonal website showcasing my skills and interests"
+    },
+    {
+        "title": "Habitizer",
+        "image": "/images/habitizer.png",
+        "description": "Android mobile application, for keeping track of routines"
+    },
+    {
+        "title": "Power Outages Analysis",
+        "image": "/images/power_outage.png",
+        "description": "Analysis and predictor for Power outages in the united states"
+    },
+    {
+        "title": "Odio hic quas incidunt!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Iste, tempora rerum quae, perferendis harum autem illo, ea odio aliquam vitae atque deleniti. Sit totam, assumenda quis aperiam adipisci quaerat qui aut, corporis, aliquam debitis alias repudiandae eligendi quisquam!"
+    },
+    {
+        "title": "Music Recommender",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Using public spotify data, created recommender system"
+    },
+    {
+        "title": "Inventore quam totam neque.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Natus dolorum sint ex rem, beatae corporis, fugit recusandae laudantium dicta consequuntur quam, nemo sequi? Quos perferendis sit, illum, excepturi consectetur velit omnis at atque, ipsam asperiores minima aut nam."
+    },
+    {
+        "title": "Illum laudantium qui eius?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "At, quam. Similique magnam exercitationem placeat aut dolor, veritatis id non soluta nesciunt eaque rem impedit eveniet quam quo corporis excepturi nobis! Suscipit itaque ad praesentium magni inventore perspiciatis obcaecati!"
+    },
+    {
+        "title": "Quam soluta eveniet commodi.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Possimus officia sed provident, error perferendis maxime, cupiditate ut repellat, accusantium molestiae obcaecati ratione animi neque. Aperiam fugiat tempore blanditiis earum quis laboriosam maiores, possimus a illum, repudiandae ratione veritatis."
+    },
+    {
+        "title": "Autem, est sit. Maxime.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Architecto neque atque maiores temporibus, molestias officia ducimus similique consectetur pariatur impedit recusandae quod, inventore numquam cum quae. Earum nemo voluptate voluptas error vero culpa molestiae aliquid nihil, expedita cumque!"
+    },
+    {
+        "title": "Hic rerum quod quidem.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Molestiae, ducimus? Quibusdam minus voluptas totam, consequatur quas expedita optio dolore inventore nostrum, error deleniti unde accusamus ratione molestiae velit facilis obcaecati esse cum cupiditate reprehenderit quasi quis? Amet, facere!"
+    }
+]
