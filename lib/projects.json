@@ -1,27 +1,27 @@
 [
     {
         "title": "eTrove",
-        "image": "./images/eTrove.png",
+        "image": "/eTrove.png",
         "description": "IOS Mobile Application, offering students platform to sell."
     },
     {
         "title": "Trading Bot",
-        "image": "./images/stock.jpeg",
+        "image": "/stock.jpeg",
         "description": "Uses API to get Dollar/Euro exchange rate, SVM."
     },
     {
         "title": "Portfolio",
-        "image": "./images/website.webp",
+        "image": "/website.webp",
         "description": "My presonal website showcasing my skills and interests"
     },
     {
         "title": "Habitizer",
-        "image": "./images/habitizer.png",
+        "image": "/habitizer.png",
         "description": "Android mobile application, for keeping track of routines"
     },
     {
         "title": "Power Outages Analysis",
-        "image": "./images/power_outage.png",
+        "image": "/power_outage.png",
         "description": "Analysis and predictor for Power outages in the united states"
     },
     {

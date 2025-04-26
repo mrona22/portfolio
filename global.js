@@ -102,9 +102,10 @@ export function renderProjects(project, containerElement) {
 
   project.forEach(element => {
     const article = document.createElement('article');
+    const imagePath = (location.pathname.includes("projects")) ? "../images/" : "images/";
     article.innerHTML = `
       <h3>${element.title}</h3>
-      <img src="${element.image}" alt="${element.title}">
+      <img src="${imagePath}${element.image}" alt="${element.title}">
       <p>${element.description}</p>
       `;
       containerElement.appendChild(article)
