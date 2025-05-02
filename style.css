@@ -162,3 +162,44 @@ label.color-scheme {
   border-radius: 8px; /* optional: slightly round corners */
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  display: flex;  
+  flex: 1;               
+  flex-wrap: wrap;              /* Allow wrap on small screens */
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  gap: 1rem;
+  border: 1px solid #ccc;       /* Box around it */
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9rem;
+}
+
+.swatch {
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 0.25em;
+  display: inline-block;
+}
+.container {
+  display: flex;
+  align-items: center;   /* Align top of pie chart and legend */
+  gap: 1.5rem;                 /* Space between chart and legend */
+  flex-wrap: wrap;           /* Makes it responsive */
+}
