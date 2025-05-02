@@ -43,7 +43,7 @@
     },
     {
         "title": "Bit-wise Compressor",
-        "year": 2023,
+        "year": 2024,
         "image": "/compressor.jpeg",
         "description": "Created a file compressor, which uses a Huffmann Tree to efficiently compress file."
     },
