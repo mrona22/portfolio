@@ -32,43 +32,43 @@
     {
         "title": "Odio hic quas incidunt!",
         "year": 2024,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "/no_image.png",
         "description": "Iste, tempora rerum quae, perferendis harum autem illo, ea odio aliquam vitae atque deleniti. Sit totam, assumenda quis aperiam adipisci quaerat qui aut, corporis, aliquam debitis alias repudiandae eligendi quisquam!"
     },
     {
         "title": "Music Recommender",
         "year": 2025,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "/no_image.png",
         "description": "Using public spotify data, created recommender system"
     },
     {
         "title": "Inventore quam totam neque.",
         "year": 2024,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image":"/no_image.png",
         "description": "Natus dolorum sint ex rem, beatae corporis, fugit recusandae laudantium dicta consequuntur quam, nemo sequi? Quos perferendis sit, illum, excepturi consectetur velit omnis at atque, ipsam asperiores minima aut nam."
     },
     {
         "title": "Illum laudantium qui eius?",
         "year": 2024,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "/no_image.png",
         "description": "At, quam. Similique magnam exercitationem placeat aut dolor, veritatis id non soluta nesciunt eaque rem impedit eveniet quam quo corporis excepturi nobis! Suscipit itaque ad praesentium magni inventore perspiciatis obcaecati!"
     },
     {
         "title": "Quam soluta eveniet commodi.",
         "year": 2023,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "/no_image.png",
         "description": "Possimus officia sed provident, error perferendis maxime, cupiditate ut repellat, accusantium molestiae obcaecati ratione animi neque. Aperiam fugiat tempore blanditiis earum quis laboriosam maiores, possimus a illum, repudiandae ratione veritatis."
     },
     {
         "title": "Autem, est sit. Maxime.",
         "year": 2023,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "/no_image.png",
         "description": "Architecto neque atque maiores temporibus, molestias officia ducimus similique consectetur pariatur impedit recusandae quod, inventore numquam cum quae. Earum nemo voluptate voluptas error vero culpa molestiae aliquid nihil, expedita cumque!"
     },
     {
         "title": "Hic rerum quod quidem.",
         "year": 2022,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "/no_image.png",
         "description": "Molestiae, ducimus? Quibusdam minus voluptas totam, consequatur quas expedita optio dolore inventore nostrum, error deleniti unde accusamus ratione molestiae velit facilis obcaecati esse cum cupiditate reprehenderit quasi quis? Amet, facere!"
     }
 ]

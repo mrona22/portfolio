@@ -9,7 +9,8 @@ let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 
-
+let selectedIndex = -1;
+let filteredProjects;
 
 
 function renderPieChart(projectsGiven) {
@@ -35,8 +36,38 @@ function renderPieChart(projectsGiven) {
 
     newArcs.forEach((arc, idx) => {
         // TODO, fill in step for appending path to svg using D3
-        newSVG.append('path').attr('d', arc).attr('fill', colors(idx));
+        newSVG
+            .append('path')
+            .attr('d', arc)
+            .attr('fill', colors(idx))
+            .on('click', function() {
+                selectedIndex = selectedIndex === idx ? -1 : idx;
+                newSVG
+                    .selectAll('path')
+                    .attr('class', (_, idx) => (
+                    // TODO: filter idx to find correct pie slice and apply CSS from above
+                        idx === selectedIndex ? 'selected' : ''
+                    ));
+                legend
+                    .selectAll('li')
+                    .attr('class', (_, idx) => (
+                        // TODO: filter idx to find correct legend and apply CSS from above
+                        idx === selectedIndex ? 'selected' : ''
+                ));
+                if (selectedIndex === -1) {
+                    renderProjects(filteredProjects ?? projects, projectsContainer, 'h2');
+                  } else {
+                    // TODO: filter projects and project them onto webpage
+                    // Hint: `.label` might be useful
+                    let year = newData[selectedIndex].label
+                    let base = filteredProjects ?? projects;
+                    let yearFiltered = base.filter(item => item.year == year);
+                    renderProjects(yearFiltered, projectsContainer, 'h2');
+                      
+                  }
+            });
     });
+
     // update paths and legends, refer to steps 1.4 and 2.2
     newData.forEach((d, idx) => {
         legend
@@ -56,38 +87,14 @@ function renderPieChart(projectsGiven) {
     query = event.target.value.toLowerCase();
     
     // Filter projects based on query
-    let filteredProjects = projects.filter((project) => {
+    filteredProjects = projects.filter((project) => {
       let values = Object.values(project).join('\n').toLowerCase();
       return values.includes(query);
     });
     
     // Re-render the projects and pie chart when the search query changes
+    
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects);
   });
 
-//   let selectedIndex = -1;
-//   let svg = d3.select('svg');
-  
-//   // Clear previous paths
-//   svg.selectAll('path').remove();
-
-//   let arcs = arcData.map((d) => arcGenerator(d));
-//   arcs.forEach((arc, i) => {
-//     svg
-//       .append('path')
-//       .attr('d', arc)
-//       .attr('fill', colors(i))
-//       .on('click', function() {
-//         // Toggle the selected index
-//         selectedIndex = selectedIndex === i ? -1 : i;
-  
-//         // Update paths by toggling the 'selected' class
-//         svg.selectAll('path')
-//           .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
-  
-//         // Update legend items by toggling the 'selected' class
-//         legend.selectAll('li')
-//           .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
-//       });
-//   });
