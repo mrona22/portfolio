@@ -18,10 +18,34 @@
         "description": "My presonal website showcasing my skills and interests"
     },
     {
+        "title": "Emissions Deceptive Analysis",
+        "year": 2025,
+        "image": "/emissions_image_2.jpeg",
+        "description": "Analysed Economic and Emissions Data to create two Persuasive/Deseptive visualizations on on two sides of the same arguement"
+    },
+    {
         "title": "Habitizer",
         "year": 2025,
         "image": "/habitizer.png",
         "description": "Android mobile application, for keeping track of routines"
+    },
+    {
+        "title": "Music Recommender",
+        "year": 2025,
+        "image": "/spotify.png",
+        "description": "Using public spotify data, created recommender system"
+    },
+    {
+        "title": "Graph Tool",
+        "year": 2024,
+        "image": "/graph.jpeg",
+        "description": "Created a C++ graph editer, with implemented shortes weighted path finder, Number of connected component finder."
+    },
+    {
+        "title": "Bit-wise Compressor",
+        "year": 2023,
+        "image": "/compressor.jpeg",
+        "description": "Created a file compressor, which uses a Huffmann Tree to efficiently compress file."
     },
     {
         "title": "Power Outages Analysis",
@@ -30,22 +54,16 @@
         "description": "Analysis and predictor for Power outages in the united states"
     },
     {
-        "title": "Odio hic quas incidunt!",
-        "year": 2024,
-        "image": "/no_image.png",
-        "description": "Iste, tempora rerum quae, perferendis harum autem illo, ea odio aliquam vitae atque deleniti. Sit totam, assumenda quis aperiam adipisci quaerat qui aut, corporis, aliquam debitis alias repudiandae eligendi quisquam!"
+        "title": "Picture Porcessor",
+        "year": 2023,
+        "image": "/galery.jpeg",
+        "description": "Python codebase for picture editing, grayscaling, turning"
     },
     {
-        "title": "Music Recommender",
-        "year": 2025,
-        "image": "/no_image.png",
-        "description": "Using public spotify data, created recommender system"
-    },
-    {
-        "title": "Inventore quam totam neque.",
-        "year": 2024,
-        "image":"/no_image.png",
-        "description": "Natus dolorum sint ex rem, beatae corporis, fugit recusandae laudantium dicta consequuntur quam, nemo sequi? Quos perferendis sit, illum, excepturi consectetur velit omnis at atque, ipsam asperiores minima aut nam."
+        "title": "Playlist Builder",
+        "year": 2023,
+        "image":"/playlist_builder.png",
+        "description": "Java project, for creating playlists, adding, removing songs. Options for for different playable modes "
     },
     {
         "title": "Illum laudantium qui eius?",
