@@ -203,3 +203,21 @@ label.color-scheme {
   gap: 1.5rem;                 /* Space between chart and legend */
   flex-wrap: wrap;           /* Makes it responsive */
 }
+
+svg:has(path:hover) {
+  path:not(:hover) {
+  opacity: 0.5;
+  }
+}
+path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
