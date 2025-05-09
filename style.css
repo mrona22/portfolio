@@ -226,3 +226,50 @@ path.selected {
   --color: oklch(60% 45% 0) !important;
   fill: var(--color) !important;
 } */
+
+/* This wraps all the stats */
+.stats-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* To make sure content doesn't overflow */
+}
+
+/* This container forces all items to stay on one line */
+.meta-stats {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap; /* Prevent wrapping, keep everything on one line */
+}
+
+/* Each stat box */
+.meta-stats > div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  min-width: 120px; /* Adjust to prevent squishing */
+}
+
+/* Styling for dt (title) and dd (value) */
+.meta-stats dt {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.meta-stats dd {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
