@@ -104,11 +104,14 @@ async function loadData() {
         height: height - margin.top - margin.bottom,
       };
 
+
     const svg = d3
     .select('#chart')
     .append('svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('overflow', 'visible');
+
+
 
     const xScale = d3
     .scaleTime()
@@ -120,19 +123,27 @@ async function loadData() {
 
     const dots = svg.append('g').attr('class', 'dots');
 
+    const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+    const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([5, 12]);
+    const sortedCommits = d3.sort(commits, (d) => -d.totalLines)
+
     dots
     .selectAll('circle')
-    .data(commits)
+    .data(sortedCommits)
     .join('circle')
     .attr('cx', (d) => xScale(d.datetime))
     .attr('cy', (d) => yScale(d.hourFrac))
-    .attr('r', 5)
-    .attr('fill', 'steelblue')
+    .attr('r', (d) => rScale(d.totalLines))
+    .style('fill-opacity', 0.7) // Add transparency for overlapping dots
     .on('mouseenter', (event, commit) => {
+        d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
         renderTooltipContent(commit);
+        updateTooltipVisibility(true);
+        updateTooltipPosition(event);
     })
-    .on('mouseleave', () => {
-        // TODO: Hide the tooltip
+        .on('mouseleave', (event) => {
+        d3.select(event.currentTarget).style('fill-opacity', 0.7);
+        updateTooltipVisibility(false);
     });
 
     const xAxis = d3.axisBottom(xScale);
@@ -173,13 +184,24 @@ async function loadData() {
       dateStyle: 'full',
     });
   }
-  
-   
+  function updateTooltipVisibility(isVisible) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
+  }
 
-  
-  
-  
-  
+  function updateTooltipPosition(event) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.style.left = `${event.clientX}px`;
+    tooltip.style.top = `${event.clientY}px`;
+  }
+
+  function createBrushSelector(svg) {
+    svg.call(d3.brush());
+    // Raise dots and everything after overlay
+    //svg.selectAll('.dots').raise();
+    svg.selectAll('.dots, .overlay ~ *').raise();
+  }
+
 
 let data = await loadData();
 let commits = processCommits(data);
