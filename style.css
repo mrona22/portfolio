@@ -345,3 +345,35 @@ circle {
   /*fill-opacity: 0.7; */
 }
 
+.whatever {
+  width: 50%;  /* Adjust the width of the wrapper div */
+  margin: 0 auto;  /* Center the wrapper */
+  padding: 20px 0;  /* Add some padding for spacing */
+}
+
+.language-box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;  /* Space between boxes */
+}
+
+.language-box {
+  width: 30%;  /* Size of each box */
+  padding: 5px;  /* Padding for each box */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.language-box h3 {
+  font-size: 0.8em;  /* Smaller font for the box title */
+  margin-bottom: 4px;
+}
+
+.language-box p {
+  font-size: 0.8em;  /* Smaller font for the percentage */
+  font-weight: bold;
+  color: #333;
+}
+

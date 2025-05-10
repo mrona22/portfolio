@@ -262,16 +262,30 @@ async function loadData() {
     // Update DOM with breakdown
     container.innerHTML = '';
   
+    const languageBoxContainer = document.createElement('div');
+    languageBoxContainer.classList.add('language-box-container');
+  
     for (const [language, count] of breakdown) {
       const proportion = count / lines.length;
       const formatted = d3.format('.1~%')(proportion);
   
-      container.innerHTML += `
-              <dt>${language}</dt>
-              <dd>${count} lines (${formatted})</dd>
-          `;
+      // Create a box for each language
+      const languageBox = document.createElement('div');
+      languageBox.classList.add('language-box');
+      
+      languageBox.innerHTML = `
+        <h3>${language}</h3>
+        <p>${formatted}</p>
+      `;
+  
+      // Append each language box to the container
+      languageBoxContainer.appendChild(languageBox);
     }
+  
+    // Append the language boxes to the container in the DOM
+    container.appendChild(languageBoxContainer);
   }
+  
   
 
 
