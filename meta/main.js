@@ -21,6 +21,8 @@ async function loadData() {
   }
 
 
+  let xScale, yScale;
+
 
   function processCommits(data) {
     return d3
@@ -113,13 +115,13 @@ async function loadData() {
 
 
 
-    const xScale = d3
+    xScale = d3
     .scaleTime()
     .domain(d3.extent(commits, (d) => d.datetime))
     .range([usableArea.left, usableArea.right])
     .nice();
 
-    const yScale = d3.scaleLinear().domain([0, 24]).range([usableArea.bottom, usableArea.top]);
+    yScale = d3.scaleLinear().domain([0, 24]).range([usableArea.bottom, usableArea.top]);
 
     const dots = svg.append('g').attr('class', 'dots');
 
@@ -170,6 +172,8 @@ async function loadData() {
     // Create gridlines as an axis with no labels and full-width ticks
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 
+    createBrushSelector(svg)
+
    }
 
    function renderTooltipContent(commit) {
@@ -195,12 +199,45 @@ async function loadData() {
     tooltip.style.top = `${event.clientY}px`;
   }
 
+  function brushed(event) {
+    const selection = event.selection;
+    d3.selectAll('circle').classed('selected', (d) =>
+      isCommitSelected(selection, d),
+    );
+    renderSelectionCount(selection)
+  }
+  
+  function isCommitSelected(selection, commit) { 
+    if (!selection) { return false; } 
+    const [x0, x1] = selection.map((d) => d[0]); 
+    const [y0, y1] = selection.map((d) => d[1]); 
+    const x = xScale(commit.datetime); 
+    const y = yScale(commit.hourFrac); 
+    return x >= x0 && x <= x1 && y >= y0 && y <= y1; 
+}
+  
+
   function createBrushSelector(svg) {
-    svg.call(d3.brush());
+    //d3.select(svg).call(d3.brush().on('start brush end', brushed));
+    svg.call(d3.brush().on('start brush end', brushed));
     // Raise dots and everything after overlay
     //svg.selectAll('.dots').raise();
     svg.selectAll('.dots, .overlay ~ *').raise();
   }
+
+  function renderSelectionCount(selection) {
+    const selectedCommits = selection
+      ? commits.filter((d) => isCommitSelected(selection, d))
+      : [];
+  
+    const countElement = document.querySelector('#selection-count');
+    countElement.textContent = `${
+      selectedCommits.length || 'No'
+    } commits selected`;
+  
+    return selectedCommits;
+  }
+  
 
 
 let data = await loadData();

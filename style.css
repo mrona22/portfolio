@@ -293,14 +293,12 @@ circle:hover {
 /* Tooltip Styling */
 #commit-tooltip {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle elevation effect */
-  backdrop-filter: blur(5px); /* Frosted glass effect */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
   font-size: 0.9rem;
-  color: #333;
-  z-index: 1000;
 }
 
 #commit-tooltip dt {
@@ -324,5 +322,26 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
 
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+circle {
+  fill: #333; /* Default color for circles */
+  /*fill-opacity: 0.7; */
+}
 
