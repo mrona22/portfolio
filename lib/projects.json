@@ -21,7 +21,7 @@
         "title": "Portfolio",
         "year": 2025,
         "image": "/website.webp",
-        "description": "My presonal website showcasing my skills and interests"
+        "description": "My presonal website showcasing my skills and interests. Built Using D3, HTML, CSS and JS."
     },
     {
         "title": "D3 Data Findings",
@@ -44,8 +44,8 @@
     {
         "title": "Music Recommender",
         "year": 2025,
-        "image": "/spotify.png",
-        "description": "Using public spotify data, created recommender system"
+        "image": "/playlist_builder.png",
+        "description": "Using public spotify data, created recommender system for recommending Songs based on the tracks in your playlist."
     },
     {
         "title": "Graph Tool",
@@ -63,18 +63,18 @@
         "title": "Power Outages Analysis",
         "year": 2024,
         "image": "/power_outage.png",
-        "description": "Analysis and predictor for Power outages in the united states"
+        "description": "Analysis and predictor for Power outages in the united states. Analyzed missingness of Data and Created predictor for length of outage."
     },
     {
         "title": "Picture Porcessor",
         "year": 2023,
         "image": "/galery.jpeg",
-        "description": "Python codebase for picture editing, grayscaling, turning"
+        "description": "Python codebase for picture editing, grayscaling, turning."
     },
     {
         "title": "Playlist Builder",
         "year": 2023,
-        "image":"/playlist_builder.png",
-        "description": "Java project, for creating playlists, adding, removing songs. Options for for different playable modes "
+        "image":"/spotify.png",
+        "description": "Java project, for creating playlists, adding, removing songs. Supporting options for for different playable modes"
     }
 ]
