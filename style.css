@@ -377,3 +377,31 @@ circle {
   color: #333;
 }
 
+
+.skill-section {
+  margin-bottom: 2rem;
+}
+
+.skill-section h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-group span {
+  background-color: #f0f0f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+

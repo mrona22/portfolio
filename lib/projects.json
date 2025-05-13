@@ -1,15 +1,21 @@
 [
     {
-        "title": "eTrove",
+        "title": "eTrove: College Marketplace and Community App",
         "year": 2025,
         "image": "/eTrove.png",
-        "description": "IOS Mobile Application, offering students platform to sell."
+        "description": "Developed an iOS application, allowing students to view posts, chat with peers, and post products for sale. The app includes email verification for account security and push notifications for real-time updates."
     },
     {
-        "title": "Trading Bot",
+        "title": "Climate Model Emulation using Neural Nets",
+        "year": 2025,
+        "image": "/climate.jpeg",
+        "description": "Developed model to predict climate variables under different SSP scenarios, utilizing CMIP6 data. Focuses on reducing computational costs while maintaining prediction accuracy."
+    },
+    {
+        "title": "Real-Time Market Data Prediction Bot",
         "year": 2025,
         "image": "/stock.jpeg",
-        "description": "Uses API to get Dollar/Euro exchange rate, SVM."
+        "description": "Developed a real-time market data prediction bot that integrates WebSocket streaming for continuous data collection and machine learning for predicting future market trends. Uses the TwelveData API."
     },
     {
         "title": "Portfolio",
@@ -18,16 +24,22 @@
         "description": "My presonal website showcasing my skills and interests"
     },
     {
+        "title": "D3 Data Findings",
+        "year": 2025,
+        "image": "/D3_image.jpeg",
+        "description": "Created an interactive D3 & JS project to visualize tempriture and Activity data for 15 male/female mice."
+    },
+    {
         "title": "Emissions Deceptive Analysis",
         "year": 2025,
         "image": "/emissions_image_2.jpeg",
-        "description": "Analysed Economic and Emissions Data to create two Persuasive/Deseptive visualizations on on two sides of the same arguement"
+        "description": "Analysed Economic and Emissions Data to create two Persuasive/Deseptive visualizations on on two sides of the same arguement."
     },
     {
         "title": "Habitizer",
         "year": 2025,
         "image": "/habitizer.png",
-        "description": "Android mobile application, for keeping track of routines"
+        "description": "Java based Android mobile application, for keeping track of routines. Utilizing Agile Software Engineering Principles."
     },
     {
         "title": "Music Recommender",
@@ -64,29 +76,5 @@
         "year": 2023,
         "image":"/playlist_builder.png",
         "description": "Java project, for creating playlists, adding, removing songs. Options for for different playable modes "
-    },
-    {
-        "title": "Illum laudantium qui eius?",
-        "year": 2024,
-        "image": "/no_image.png",
-        "description": "At, quam. Similique magnam exercitationem placeat aut dolor, veritatis id non soluta nesciunt eaque rem impedit eveniet quam quo corporis excepturi nobis! Suscipit itaque ad praesentium magni inventore perspiciatis obcaecati!"
-    },
-    {
-        "title": "Quam soluta eveniet commodi.",
-        "year": 2023,
-        "image": "/no_image.png",
-        "description": "Possimus officia sed provident, error perferendis maxime, cupiditate ut repellat, accusantium molestiae obcaecati ratione animi neque. Aperiam fugiat tempore blanditiis earum quis laboriosam maiores, possimus a illum, repudiandae ratione veritatis."
-    },
-    {
-        "title": "Autem, est sit. Maxime.",
-        "year": 2023,
-        "image": "/no_image.png",
-        "description": "Architecto neque atque maiores temporibus, molestias officia ducimus similique consectetur pariatur impedit recusandae quod, inventore numquam cum quae. Earum nemo voluptate voluptas error vero culpa molestiae aliquid nihil, expedita cumque!"
-    },
-    {
-        "title": "Hic rerum quod quidem.",
-        "year": 2022,
-        "image": "/no_image.png",
-        "description": "Molestiae, ducimus? Quibusdam minus voluptas totam, consequatur quas expedita optio dolore inventore nostrum, error deleniti unde accusamus ratione molestiae velit facilis obcaecati esse cum cupiditate reprehenderit quasi quis? Amet, facere!"
     }
 ]
