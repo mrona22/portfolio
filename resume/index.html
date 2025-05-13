@@ -1,82 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milan Rona - Resume</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        :root {
-            --color-accent: oklch(90% 90% 50); /* Accent color */
-        }
-    </style>
-    <script type="module" src="../global.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Milan Rona - Resume</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    :root {
+      --color-accent: oklch(90% 90% 50);
+    }
+
+    .project-meta {
+      font-size: 0.9em;
+      font-style: italic;
+      margin: 0.2em 0 0.5em 0;
+    }
+  </style>
+  <script type="module" src="../global.js"></script>
 </head>
-<body, class="resume">
-    
-    <h1>Milan Rona</h1>
-    <p>Email: <a href="mailto:ronamilan0322@gmail.com">ronamilan0322@gmail.com</a></p>
-    <p>Phone: (213) 442-5709</p>
-    <p>Location: 9450 Gilman Dr., San Diego, CA 92092</p>
+<body class="resume">
 
-    <hr>
+  <h1 style="text-align: center;">Milan Rona</h1>
+    <p class="contact-info">
+  <span class="contact-box">Email: <a href="mailto:ronamilan0322@gmail.com">ronamilan0322@gmail.com</a></span> 
+  <span class="contact-box">Phone: (213) 442-5709</span> 
+  <span class="contact-box">Location: 9450 Gilman Dr., San Diego, CA 92092</span>
+    </p>
 
-    <h2>Education</h2>
-    <p><strong>UC San Diego (BSc Major) Math-Computer Science</strong> | Expected Graduation: June 2025</p>
+  <p>I’m actively looking for opportunities in software engineering or data science. I am eligible for a 2-year OPT extension in the United States and also qualify for the 2-year Graduate Route work visa in the United Kingdom.</p>
+
+  <hr />
+
+  <h2>Education</h2>
+  <p><strong>UC San Diego</strong> | BSc in Math–Computer Science | Expected June 2025</p>
+  <ul>
+    <li>GPA: 3.53, Provost’s Honors, Division 1 Fencer</li>
+    <li>Relevant Courses: Advanced Data Structures, Deep Learning, Design and Analysis of Algorithms, Computer Organization & Systems Programming, Software Engineering</li>
+  </ul>
+  <p><strong>Minor: Data Science</strong></p>
+  <ul>
+    <li>Minor GPA: 3.7</li>
+    <li>Relevant Courses: Data Mining, Supervised Machine Learning, Probabilistic Modeling and Machine Learning, Optimization for Data Science</li>
+  </ul>
+
+  <hr />
+
+  <h2>Work Experience</h2>
+  <p style="font-size: 1.2em"><strong>10XONE – Summer Intern</strong> | Budapest, Hungary | July 2024 – August 2024</p>
+  <ul>
+    <li>Researched and evaluated AI tools for SQL query and code analysis, enhancing tool selection efficiency.</li>
+    <li>Contributed to team goals by updating internal documentation and resolving minor bugs.</li>
+  </ul>
+
+  <p style="font-size: 1.2em" ><strong>eTrove – Co-founder & Developer</strong> | San Diego, CA | February 2025 – Present</p>
+  <ul>
+    <li>Spearheaded key feature development for a Swift-based mobile app including authentication, post feeds, and real-time notifications.</li>
+    <li>Optimized Firebase Firestore queries, improving app performance by 20%.</li>
+    <li>Built and integrated a Firebase Cloud Function to send messaging and activity notifications.</li>
+    <li>Developed a Recommender System to increase engagement and retention.</li>
+  </ul>
+
+  <hr />
+
+  <h2>Technical Skills & Projects</h2>
+
+  <h3><a href="https://mrona22.github.io/PowerOutages-Analysis/" target="_blank">Power Outages Analysis</a> – Personal Project</h3>
+  <p class="project-meta">Python, Scikit-Learn, SciPy, Machine Learning</p>
+  <ul>
+    <li>Used an SVC model to predict climate-related outages with 83.3% accuracy via feature engineering and GridSearchCV.</li>
+    <li>Applied cross-validation and ANOVA for statistical validation.</li>
+    <li>Improved predictive performance through iterative feature selection.</li>
+  </ul>
+
+  <h3><a href="https://github.com/mrona22/Forex-Trading_Bot" target="_blank">Algorithmic Trading Bot</a> – Personal Project</h3>
+  <p class="project-meta">Python, Pandas, WebSockets, TwelveData API</p>
+  <ul>
+    <li>Created an automated trading system using real-time financial data.</li>
+    <li>Implemented Bollinger Bands, Stochastic Oscillator, and CCI for market signal detection.</li>
+    <li>Built a live data pipeline with WebSocket streams and Pandas transformations.</li>
+  </ul>
+
+  <h3>Kaggle Competition: Climate Model Emulation – Ongoing</h3>
+  <p class="project-meta">PyTorch, CMIP6 Data | Expected Completion: May 2025</p>
+  <ul>
+    <li>Emulating physics-based climate models using CMIP6 data.</li>
+    <li>Designing deep learning models to capture spatial-temporal and physical dynamics across climate scenarios.</li>
+    <li>Balancing accuracy with computational efficiency for inference-time predictions.</li>
+  </ul>
+
+  <h3><a href="https://github.com/mrona22/habitizer" target="_blank">Habitizer App</a> – Academic Project</h3>
+    <p class="project-meta">Java, Android Studio, GitHub, JUnit, GitHub Actions CI</p>
     <ul>
-        <li>GPA: 3.53, Provost’s Honors, Division 1 Fencer</li>
-        <li>Relevant Courses: Advanced Data Structures, Design and Analysis of Algorithms, Computer Organization & Systems Programming, Software Engineering</li>
+    <li>Built a habit-tracking Android app with persistent storage and custom routines.</li>
+    <li>Utilized Strategy, Observer, and MVP design patterns within a BDD framework.</li>
     </ul>
 
-    <p><strong>UC San Diego (Minor) Data Science</strong></p>
-    <ul>
-        <li>GPA: 3.7</li>
-        <li>Relevant Courses: Data Mining, Supervised Machine Learning, Probabilistic Modeling and Machine Learning, Optimization for Data Science</li>
-    </ul>
 
-    <hr>
+  <h3>Huffman Compressor – Academic Project</h3>
+  <p class="project-meta">C++, File I/O, Data Structures</p>
+  <ul>
+    <li>Implemented Huffman coding to achieve lossless file compression.</li>
+    <li>Used min-heaps and bitwise operations to optimize compression speed and size.</li>
+  </ul>
 
-    <h2>Work Experience</h2>
-    <p><strong>10XONE – Summer Intern</strong> | Budapest, Hungary | July 2024 – August 2024</p>
-    <ul>
-        <li>Researched and evaluated AI tools for SQL query and code analysis, enhancing tool selection efficiency.</li>
-        <li>Contributed to team goals by updating internal documentation and resolving minor bugs.</li>
-    </ul>
-
-    <hr>
-
-    <h2>Technical Skills & Projects</h2>
-    <h3><a href="https://mrona22.github.io/PowerOutages-Analysis/" target="_blank">Power Outages Analysis</a> - Personal Project</h3>
-    <p>Python, Scikit-Learn, SciPy, Machine Learning</p>
-    <ul>
-        <li>Implemented an SVC model to predict climate-related outage causes, achieving 83.3% accuracy.</li>
-        <li>Used feature engineering, hyperparameter tuning (GridSearchCV), cross-validation, and ANOVA.</li>
-    </ul>
-
-    <h3>Huffman Compressor - Academic Project</h3>
-    <p>C++, File I/O, Data Structures</p>
-    <ul>
-        <li>Implemented Huffman tree for lossless file compression, optimizing file size and integrity.</li>
-        <li>Utilized priority queues (min-heaps) and bitwise operations for efficient compression.</li>
-    </ul>
-
-    <h3><a href="https://github.com/mrona22/Forex-Trading_Bot" target="_blank">Algorithmic Trading Bot</a> - Personal Project (In Progress)</h3>
-    <p>Python, Pandas, WebSockets, API Integration</p>
-    <ul>
-        <li>Developed an automated trading bot using real-time financial data from TwelveData API.</li>
-        <li>Implemented Bollinger Bands, Stochastic Oscillator, and Commodity Channel Index for analysis.</li>
-    </ul>
-
-    <h3>Habitizer App – Android - Academic Project</h3>
-    <p>Java, Android Studio, GitHub, JUnit, GitHub Actions CI</p>
-    <ul>
-        <li>Developed a custom routine management system with persistent data storage.</li>
-        <li>Used Behavior-Driven Development (BDD) and design patterns (Strategy, Observer, MVP).</li>
-    </ul>
-
-    <hr>
-
-    <p><strong>GitHub:</strong> <a href="https://github.com/mrona22" target="_blank">github.com/mrona22</a></p>
+  <hr />
+  <p><strong>GitHub:</strong> <a href="https://github.com/mrona22" target="_blank">github.com/mrona22</a></p>
 
 </body>
 </html>
